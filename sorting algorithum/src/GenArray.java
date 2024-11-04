@@ -49,4 +49,16 @@ public class GenArray {
         }
         return arrayWithDuplicates;
     }
+    public int getMax(int[] array) {
+        int maxValue = 0;
+
+        // Find the maximum value in the array
+        for (int value : array) {
+            if (value > maxValue) {
+                maxValue = value;
+            }
+        }
+
+        return maxValue;
+    }
 }

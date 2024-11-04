@@ -10,10 +10,12 @@ public class Main {
             GenArray getArray = new GenArray();
             int[] array = getArray.generateRandomArray(100);
 
+            int max = getArray.getMax(array);
+
             System.out.println("Original Array: " + Arrays.toString(array));
 
             // Create an instance of SortingVisualizer with the generated array and delay
-            SortingVisualizer visualizer = new SortingVisualizer(array, 100); // 100ms delay for visualization
+            SortingVisualizer visualizer = new SortingVisualizer(array, max);
 
             // Set up the JFrame
             JFrame frame = new JFrame("Sorting Visualizer");
@@ -23,7 +25,7 @@ public class Main {
             frame.setVisible(true);
 
             // Create an instance of quicksort with the visualizer
-            quicksort sorting = new quicksort(array, visualizer, 00);
+            quicksort sorting = new quicksort(array, visualizer, 100);
             int[] sortedArray = sorting.sort();
 
             System.out.println("Sorted Array: " + Arrays.toString(sortedArray));

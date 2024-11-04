@@ -5,10 +5,11 @@ import java.awt.*;
 
 public class SortingVisualizer extends JPanel {
     private int[] array; // The array to be sorted
+    private int maxValue;
 
-    public SortingVisualizer(int[] array, int delay) {
+    public SortingVisualizer(int[] array, int maxValue) {
         this.array = array;
-        //this.delay = delay;
+        this.maxValue = maxValue;
         setPreferredSize(new Dimension(800, 600)); // Set the size of the window
     }
 
@@ -21,7 +22,7 @@ public class SortingVisualizer extends JPanel {
     private void drawArray(Graphics g) {
         int width = getWidth() / array.length;
         for (int i = 0; i < array.length; i++) {
-            int height = array[i] * 5; // Scale height for visibility
+            int height = (int) ((array[i] / (double) maxValue) * (getHeight() - 20)); // Leave some space for padding // Scale height for visibility
             g.setColor(Color.BLUE); // Set default color
             g.fillRect(i * width, getHeight() - height, width, height);
         }
