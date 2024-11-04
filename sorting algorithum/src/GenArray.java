@@ -6,7 +6,7 @@ import java.util.List;
 public class GenArray {
     
     // Method to generate a random array of unique integers
-    public static int[] generateRandomArray(int size) {
+    public int[] generateRandomArray(int size) {
         List<Integer> numbers = new ArrayList<>();
         for (int i = 1; i <= size; i++) {
             numbers.add(i);
