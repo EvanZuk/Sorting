@@ -14,7 +14,7 @@ public class quicksort {
         this.rand = new Random();
         this.delay = delay;
         this.visualizer = visualizer; // Initialize the visualizer reference
-        int[] isSort = new int[array.length];
+        this.isSort = new int[array.length];
     }
 
     public int[] sort() throws InterruptedException {
@@ -35,6 +35,7 @@ public class quicksort {
                 }
                 
             }
+            if(isSort.length )
             isSort[l] = pivot;
             l+=1;
             // Update the visualizer after each complete pass
