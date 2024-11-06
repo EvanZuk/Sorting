@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             GenArray getArray = new GenArray();
-            int[] array = getArray.generateRandomArray(100);
+            int[] array = getArray.generateRandomArray(100000);
 
             int max = getArray.getMax(array);
 
@@ -25,7 +25,7 @@ public class Main {
             frame.setVisible(true);
 
             // Create an instance of quicksort with the visualizer
-            quicksort sorting = new quicksort(array, visualizer, 100);
+            quicksort sorting = new quicksort(array, visualizer, 0);
             int[] sortedArray = sorting.sort();
 
             System.out.println("Sorted Array: " + Arrays.toString(sortedArray));

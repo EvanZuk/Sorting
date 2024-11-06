@@ -14,13 +14,13 @@ public class quicksort {
         this.rand = new Random();
         this.delay = delay;
         this.visualizer = visualizer; // Initialize the visualizer reference
-        this.isSort = new int[array.length];
+        //this.isSort = new int[array.length];
     }
 
     public int[] sort() throws InterruptedException {
         int[] sortedArray = array;
         boolean isSorted = false;
-        int l = 0;
+        //int l = 0;
 
         while (!isSorted) {
             int pivot = getPivot();
@@ -35,10 +35,10 @@ public class quicksort {
                 }
                 
             }
-            if(isSort.length < 100) {
-            isSort[l] = pivot;
-            }
-            l+=1;
+
+            //isSort[l] = pivot;
+            
+            //l+=1;
             // Update the visualizer after each complete pass
             visualizer.repaint();
             Thread.sleep(delay);
@@ -52,13 +52,14 @@ public class quicksort {
     public int getPivot() {
 
         int piv = rand.nextInt(array.length);
-        if(isSort != null) {
-        for(int i = 0; i < isSort.length; i++) {
-            if(piv == isSort[i]) {
-                piv = rand.nextInt(array.length);
-            }
-        }
-        }   
+       // if(isSort != null) {
+       // for(int i = 0; i < isSort.length; i++) {
+       //     if(piv == isSort[i]) {
+       //         piv = rand.nextInt(array.length);
+        //        i = 0;
+        //    }
+        //}
+        //}   
         return piv;
     }
 
