@@ -35,8 +35,9 @@ public class quicksort {
                 }
                 
             }
-            if(isSort.length )
+            if(isSort.length < 100) {
             isSort[l] = pivot;
+            }
             l+=1;
             // Update the visualizer after each complete pass
             visualizer.repaint();
